@@ -27,6 +27,7 @@ if __name__=="__main__":
 	for batch in datagen.flow(x,batch_size=1):
 	    plt.figure(i)
 	    imgplot=plt.imshow(image.array_to_img(batch[0]))
+	    plt.savefig(str(i)+"cat.png")
 	    i+=1
 	    if i % 4==0: break
 	plt.show()

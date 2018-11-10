@@ -39,6 +39,7 @@ if __name__=="__main__":
 	network=models.Sequential()
 	network.add(layers.Dense(512,activation='relu',input_shape=(28*28,))) ## hidden layer with 512 neurons
 	network.add(layers.Dense(10,activation='softmax'))                    ## output layer with 10 neurons,which corresponds to 10 digits
+	print network.summary()
 	network.compile(optimizer='rmsprop',loss='categorical_crossentropy',metrics=['accuracy'])
 
 	print  "---------Preparing input layer-----------" 
